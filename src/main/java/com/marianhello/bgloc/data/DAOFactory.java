@@ -8,7 +8,7 @@ import com.marianhello.bgloc.data.sqlite.SQLiteConfigurationDAO;
 
 public abstract class DAOFactory {
     public static LocationDAO createLocationDAO(Context context) {
-        return new ContentProviderLocationDAO(context);
+        return new SQLiteLocationDAO(context);
     }
 
     public static ConfigurationDAO createConfigurationDAO(Context context) {
